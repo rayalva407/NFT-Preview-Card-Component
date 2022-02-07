@@ -10,20 +10,76 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
+
+    html, body {
+      height: 97vh;
+    }
+
+    body {
+      background-color: blue;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    main {
+      width: 90%;
+      height: 75%;
+      background-color: red;
+      padding-top: 20px;
+      border-radius: 10px;
+    }
+
+    #img {
+      background-color: red;
+      display: flex;
+      justify-content: center;
+    }
+
+    #nft-image {
+      width: 90%;
+      border-radius: 10px;
+    }
+
+    #pfp {
+      width: 12%;
+      float: left;
+    }
+
+    #creator {
+      margin-left: 45px;
+    }
+
+    #info {
+      margin: 15px;
+      height: 35%;
+    }
+     #time {
+       float: right;
+     }
+    
+    .attribution { font-size: 11px;
+      text-align: center;
+    }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
 <body>
-
-  Equilibrium #3429
-
-  Our Equilibrium collection promotes balance and calm.
-
-  0.041 ETH
-  3 days left
-  
-  Creation of Jules Wyvern
+  <main>
+    <div id="img">
+      <img id="nft-image" src="images/image-equilibrium.jpg" alt="">
+    </div>
+    <div id="info">
+      <h3>Equilibrium #3429</h3>
+      <p>Our Equilibrium collection promotes balance and calm.</p>
+      <span id="price">0.041 ETH</span>
+      <span id="time">3 days left</span>
+      <hr>
+      <img id="pfp" src="images/image-avatar.png" alt="A profile picture of some guy">
+      <p id="creator"">Creation of Jules Wyvern</p>
+    </div>
+  </main>
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
