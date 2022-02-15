@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
   
   <title>Frontend Mentor | NFT preview card component</title>
 
@@ -13,10 +16,13 @@
 
     html, body {
       height: 97vh;
+      color: hsl(215, 51%, 70%);
+      font-size: 18px;
+      font-family: "Outfit", sans-serif;
     }
 
     body {
-      background-color: blue;
+      background-color: hsl(217, 54%, 11%);
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -25,14 +31,26 @@
 
     main {
       width: 90%;
-      height: 75%;
-      background-color: red;
-      padding-top: 20px;
+      height: 81%;
+      background-color: hsl(216, 50%, 16%);
+      padding: 20px 5px 5px 5px;
       border-radius: 10px;
     }
 
+    h3 {
+      color: hsl(0, 0%, 100%);
+    }
+
+    p {
+      font-weight: 200;
+    }
+
+    hr {
+      color: hsl(215, 32%, 27%);
+    }
+
+
     #img {
-      background-color: red;
       display: flex;
       justify-content: center;
     }
@@ -44,19 +62,38 @@
 
     #pfp {
       width: 12%;
+      padding-top: 5px;
       float: left;
     }
 
     #creator {
+      padding-top: 5px;
       margin-left: 45px;
+    }
+
+    #creator-name {
+      color: hsl(0, 0%, 100%);
     }
 
     #info {
       margin: 15px;
       height: 35%;
     }
+
+    #price {
+      color: hsl(178, 100%, 50%)
+     }
+     
+     #eth-icon {
+       margin-right: 5px;
+     }
+
      #time {
        float: right;
+     }
+
+     #clock {
+       margin-right: 5px;
      }
     
     .attribution { font-size: 11px;
@@ -73,11 +110,11 @@
     <div id="info">
       <h3>Equilibrium #3429</h3>
       <p>Our Equilibrium collection promotes balance and calm.</p>
-      <span id="price">0.041 ETH</span>
-      <span id="time">3 days left</span>
+      <span id="price"><svg id="eth-icon" width="11" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 10.216 5.5 18 0 10.216l5.5 3.263 5.5-3.262ZM5.5 0l5.496 9.169L5.5 12.43 0 9.17 5.5 0Z" fill="#00FFF8"/></svg>0.041 ETH</span>
+      <span id="time"><svg id="clock" width="17" height="17" xmlns="http://www.w3.org/2000/svg"><path d="M8.305 2.007a6.667 6.667 0 1 0 0 13.334 6.667 6.667 0 0 0 0-13.334Zm2.667 7.334H8.305a.667.667 0 0 1-.667-.667V6.007a.667.667 0 0 1 1.334 0v2h2a.667.667 0 0 1 0 1.334Z" fill="#8BACD9"/></svg><span>3 days left</span></span>
       <hr>
       <img id="pfp" src="images/image-avatar.png" alt="A profile picture of some guy">
-      <p id="creator"">Creation of Jules Wyvern</p>
+      <p id="creator"">Creation of <span id="creator-name">Jules Wyvern</span></p>
     </div>
   </main>
 
