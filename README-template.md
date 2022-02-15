@@ -1,7 +1,3 @@
-# Frontend Mentor - NFT preview card component solution
-
-This is a solution to the [NFT preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/nft-preview-card-component-SbdUL_w0U). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
-
 ## Table of contents
 
 - [Overview](#overview)
@@ -16,8 +12,6 @@ This is a solution to the [NFT preview card component challenge on Frontend Ment
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -29,83 +23,68 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![](./images/screenshot.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution at Frontend Mentor](https://www.frontendmentor.io/solutions/mobilefirst-workflow-nft-preview-card-component-pGgtUCAX0)
+- Live Site URL: [Live Site](https://rayalva407.github.io/NFT-Preview-Card-Component/)
 
 ## My process
+
+In this project I decided to work using a mobile-first approach. I built out the project fully as a mobile friendly page first and then worked on the desktop version. I made a quick sketch and decided to make use of semantic html as much as possible. After setting up the inital HTML I got to work on the CSS. From there it was just trial and error with the styling.
 
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
+In this project I learned a few things about how to position elements. Usually I just use flexbox or grid to position things around but this time I was in a situation where I used float and absolut positioning which was very interesting to me. I also learned how to make an overlay when hovering over an image. This is the code I used for the overlay
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+<div id="img">
+  <img id="nft-image" src="images/image-equilibrium.jpg" alt="">
+  <div id="overlay">
+    <svg id="view-icon" width="48" height="48" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h48v48H0z"/><path d="M24 9C14 9 5.46 15.22 2 24c3.46 8.78 12 15 22 15 10.01 0 18.54-6.22 22-15-3.46-8.78-11.99-15-22-15Zm0 25c-5.52 0-10-4.48-10-10s4.48-10 10-10 10 4.48 10 10-4.48 10-10 10Zm0-16c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6Z" fill="#FFF" fill-rule="nonzero"/></g></svg>
+  </div>
+</div>
 ```
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+#overlay {
+  position: absolute;
+  display: flex;
+  width: 342px;
+  height: 342px;
+  opacity: 0;
+  transition: .3s ease;
+  background-color: hsla(178, 100%, 50%, 0.322);
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+#img:hover #overlay {
+  opacity: 1;
+  cursor: pointer;
 }
 ```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+It's definitely not a perfect solution but for a first attempt I am proud of what I learned and accomplished with this challenge.
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+There is one thing that I was not able to complete in this challenge. The profile picture of the creator has a round border around it. I could not get this style to work no matter what I tried! I kept getting a square background no matter what I did. I am going to read more into the box model and do more research on this to see if I can get this resolved.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [How to create an overlay](https://www.w3schools.com/howto/howto_css_image_overlay_icon.asp) - This helped me understand what went into creating an overlay over an image. I tooks some of the code from this page and made it my own to fit into my project.
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Media Queries](https://www.w3schools.com/Css/css3_mediaqueries_ex.asp) - This is an amazing article which helped me finally understand media queries and how they work. I'd recommend it to anyone still learning this concept.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Website - [Raymundo Alva](https://rayalva407.github.io)
+- Github - [@rayalva407](https://github.com/rayalva407)
+- Frontend Mentor - [@rayalva407](https://www.frontendmentor.io/profile/rayalva407)
